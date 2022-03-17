@@ -1,0 +1,13 @@
+.vs/
+
+BlazingKonva/Client/bin/Debug
+BlazingKonva/Client/bin/Release
+BlazingKonva/Client/obj
+
+BlazingKonva/Server/bin/Debug
+BlazingKonva/Server/bin/Release
+BlazingKonva/Server/obj
+
+BlazingKonva/JS/bin/Debug
+BlazingKonva/JS/bin/Release
+BlazingKonva/JS/obj

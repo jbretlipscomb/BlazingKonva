@@ -1,0 +1,20 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>Konva JS Sample</PageTitle>
+
+<h1>Hello World</h1>
+<div id="konva_canvas" @ref="KonvaCanvas"></div>
+
+@code {
+    ElementReference KonvaCanvas;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var blazingKonvaModule = await JS.InvokeAsync<IJSObjectReference>("import", "/js/BlazingKonva.js");
+            await JS.InvokeVoidAsync("InitKonva", "konva_canvas");
+        }
+    }
+}
